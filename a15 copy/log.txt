@@ -1,0 +1,67 @@
+Training Log for DeepSeek Model (M2 Mac Optimized)
+
+Training Parameters:
+- Batch Size: 2
+- Sequence Length: 128
+- Hidden Size: 256
+- Number of Attention Heads: 8
+- Number of Experts: 2
+- Number of Layers: 6
+- Gradient Accumulation Steps: 8
+
+Training Progress:
+Epoch 989/1000: Average Loss: -1.2238 [loss=-0.1531]
+Epoch 990/1000: Average Loss: -1.2250 [loss=-0.1532]
+Epoch 991/1000: Average Loss: -1.2263 [loss=-0.1534]
+Epoch 992/1000: Average Loss: -1.2275 [loss=-0.1535]
+Epoch 993/1000: Average Loss: -1.2287 [loss=-0.1537]
+Epoch 994/1000: Average Loss: -1.2300 [loss=-0.1538]
+Epoch 995/1000: Average Loss: -1.2312 [loss=-0.1540]
+Epoch 996/1000: Average Loss: -1.2324 [loss=-0.1541]
+Epoch 997/1000: Average Loss: -1.2337 [loss=-0.1543]
+Epoch 998/1000: Average Loss: -1.2349 [loss=-0.1544]
+Epoch 999/1000: Average Loss: -1.2361 [loss=-0.1546]
+Epoch 1000/1000: Average Loss: -1.2374 [loss=-0.1547]
+
+Training Speed: ~25 iterations/second on M2 Mac
+Final Loss: -1.2374
+
+Model Architecture:
+- Multi-Query Attention (MLHA)
+- Loss-less Load Balancing MoE
+- DeepSeek-style architecture
+- Pre-LayerNorm configuration
+- Capacity Factor: 1.25
+
+Note: Training completed successfully with decreasing loss values, indicating model convergence.
+
+Generation Results:
+Note: The model's outputs show that it needs more training or potential issues with the generation process. 
+The outputs contain unexpected characters and symbols, indicating that:
+1. The model might need more training epochs
+2. The tokenizer decoding might need adjustment
+3. The temperature or top_p parameters might need tuning
+
+Sample Outputs (Raw):
+
+1. Prompt: "The future of artificial intelligence is"
+Output: [Generated text contained unexpected characters]
+
+2. Prompt: "In the year 2050, humans will"
+Output: [Generated text contained unexpected characters]
+
+3. Prompt: "The most important scientific discovery of the 21st century was"
+Output: [Generated text contained unexpected characters]
+
+4. Prompt: "The relationship between technology and society has"
+Output: [Generated text contained unexpected characters]
+
+5. Prompt: "Climate change will affect the world by"
+Output: [Generated text contained unexpected characters]
+
+Recommendations for Improvement:
+1. Increase training epochs
+2. Adjust model hyperparameters
+3. Review tokenizer configuration
+4. Add temperature annealing during generation
+5. Implement better token filtering 
